@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Games Done Quick schedule tracker
-// @namespace    http://75thtrombone.com/
+// @namespace    https://75thtrombone.com/
 // @version      0.1
 // @description  Show current Games Done Quick event
 // @author       You
