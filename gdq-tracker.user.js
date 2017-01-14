@@ -3,7 +3,7 @@
 // @namespace    https://75thtrombone.com/
 // @version      0.1.2
 // @description  Show current Games Done Quick event
-// @author       You
+// @author       Lanny Heidbreder
 // @match        https://gamesdonequick.com/schedule
 // @grant        none
 // ==/UserScript==
@@ -89,7 +89,7 @@
 					October: 'Oct',
 					November: 'Nov',
 					December: 'Dec'
-				}
+				};
 
 				var dateString = $row.prevAll('.day-split').filter(':first').children('td').text();
 
@@ -150,10 +150,6 @@
 		$(agendaSelector).processAgenda();
 
 		$('tr.current')[0].scrollIntoView(true);
-
-		window.setTimeout(function() {
-			$('body').scrollTop($('tr.current').offset().top);
-		}, 500);
 
 		window.setInterval(function() {
 			$('tr.current').processAgenda()
