@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Games Done Quick schedule tracker
 // @namespace    https://75thtrombone.com/
-// @version      0.1.1
+// @version      0.1.2
 // @description  Show current Games Done Quick event
 // @author       You
 // @match        https://gamesdonequick.com/schedule
@@ -148,6 +148,8 @@
 		})();
 
 		$(agendaSelector).processAgenda();
+
+		$('tr.current')[0].scrollIntoView(true);
 
 		window.setTimeout(function() {
 			$('body').scrollTop($('tr.current').offset().top);
